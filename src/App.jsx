@@ -4,9 +4,9 @@ function App() {
 
   return (
     <>
-    lms
+      lms
     </>
   )
 }
 
-export default App
+export default App;
