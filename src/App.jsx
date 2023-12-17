@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css'
 import Footer from './components/Footer';
 import HomePage from './Pages/HomePage';
+import AboutUs from './Pages/AboutUs';
 
 function App() {
 
@@ -9,9 +10,9 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<HomePage />} />
+        <Route path='/about' element={<AboutUs />} />
       </Routes>
-      {/* <Footer /> */}
-      </>
+    </>
   )
 }
 

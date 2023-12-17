@@ -1,7 +1,7 @@
 import {BiLogoInstagram, BiLogoFacebook, BiLogoTwitter, BiLogoLinkedin} from 'react-icons/bi'
 
 function Footer() {
-    const year =  new Date().getFullYear;
+    const year =  new Date().getFullYear();
     return (
         <>
             <footer className="relative left-0 bottom-0 py-5 h-[10vh] justify-between items-center text-white flex flex-col sm:flex-row bg-gray-800 sm:px-20">
@@ -22,10 +22,10 @@ function Footer() {
                         <BiLogoLinkedin />
                     </a>
                 </section>
-                
             </footer>
+
         </>
-    )
+    );
 }
 
 export default Footer;

@@ -47,7 +47,7 @@ function HomeLayout({ children}) {
                     <label htmlFor="my-drawer" className="drawer-overlay">
 
                     </label>
-                    <ul className="menu bg-base-200 relative w-48 sm:w-80 p-4 text-base-content">
+                    <ul className="menu bg-base-200 h-[100%] relative w-48 sm:w-80 p-4 text-base-content">
                         <li className="w-fit absolute right-2 z-50">
 
                             <button onClick={hideDocker}>
@@ -72,7 +72,7 @@ function HomeLayout({ children}) {
                             <Link to="/about">About Us</Link>
                         </li>
                         {!isLoggedIn &&
-                            <li className="absolute -bottom-16 w-[90%]">
+                            <li className="absolute bottom-4 w-[90%]">
                                 <div className="flex items-center justify-center w-full">
                                    <button className="btn btn-primary font-semibold w-1/2 rounded-md py-1 px-4">
                                    <Link to="/login">Login</Link>
@@ -84,7 +84,7 @@ function HomeLayout({ children}) {
                             </li>
                         }
                         {isLoggedIn && (
-                            <li className="absolute -bottom-16 w-[90%">
+                            <li className="absolute bottom-4 w-[90%]">
                                 <div className="w-full flex items-center justify-center">
                                     <button className='btn btn-primary px-4 py-1 font-semibold rounded-md w-1/2'>
                                         <Link to="/user/profile">Profile</Link>
