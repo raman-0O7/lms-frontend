@@ -11,7 +11,7 @@ function NotFound() {
             <button className="m-5 group" >
                 <a href="" className="relative inline-block text-[#ff6A3D] text-sm font-medium group-active:text-yellow-500 gruop-focus:outline-none group-focus:ring"
                 >
-                    <span onClick={navigate(-1)} className="border-current block px-8 py-3 border bg-[#1A2233]">Go Back</span>
+                    <span onClick={() => navigate("/")} className="border-current block px-8 py-3 border bg-[#1A2233]">Go Home</span>
                 </a>
             </button>
         </div>
