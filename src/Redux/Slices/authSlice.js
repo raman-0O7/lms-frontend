@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import toast from "react-hot-toast";
+
 import axiosInstance from "../../Helpers/axiosInstance";
-import axios from "axios";
 
 const initialState = {
     role : localStorage.getItem('role') || "",
@@ -24,13 +24,39 @@ export const createAccount = createAsyncThunk("/auth/signup", async(data)=>{
         toast.error(e?.response?.data?.message);
     }
 })
+export const login = createAsyncThunk("/auth/login", async(data)=>{
+    try {
+        const res = axiosInstance.post("user/login", data);
+        toast.promise(res, {
+            loading: "Wait! Authenticating Credentials",
+            success: (data) => {
+                return data?.data?.message;
+            },
+            error: "Failed to Login"
+        });
+        return (await res).data;
+    } catch(e) {
+        toast.error(e?.response?.data?.message);
+    }
+});
 
 const authSlice = createSlice({
     name : 'auth',
     reducers : {},
     initialState,
+    extraReducers: (builder) => {
+        builder.addCase(login.fulfilled, (state, action) => {
+            localStorage.setItem("data", JSON.stringify(action?.payload?.user));
+            localStorage.setItem("role", action?.payload?.role);
+            localStorage.setItem("isLoggedIn", true);
+            state.data = action?.payload?.user;
+            state.role = action?.payload?.role;
+            state.isLoggedIn = true;
+        })
+    }
 
 });
 
+// eslint-disable-next-line no-empty-pattern
 export const {} = authSlice.actions;
 export default authSlice.reducer;

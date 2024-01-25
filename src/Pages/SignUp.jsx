@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { BsPersonCircle } from "react-icons/bs";
-import HomeLayout from "../HomeLayout";
-import { Link, Navigate, useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import toast from "react-hot-toast";
+import { BsPersonCircle } from "react-icons/bs";
+import { useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+
+import HomeLayout from "../HomeLayout";
 import { createAccount } from "../Redux/Slices/authSlice";
 
 function SignUp() {
