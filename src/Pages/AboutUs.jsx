@@ -1,7 +1,7 @@
-import HomeLayout from "../HomeLayout";
 import aboutMainImage from "../Asset/Images/aboutMainImage.png"
-import {carouselData} from "../constant/carouselData";
 import CarouselSlide from "../components/CarouselSlide";
+import {carouselData} from "../constant/carouselData";
+import HomeLayout from "../HomeLayout";
 
 function AboutUs() {
     const celebrities = carouselData;
