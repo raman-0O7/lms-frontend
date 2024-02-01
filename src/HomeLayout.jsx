@@ -40,7 +40,7 @@ function HomeLayout({ children }) {
             <div className="drawer text-white w-fit absolute left-0 z-50">
                 <input id="my-drawer" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content">
-                    <label htmlFor="my-drawer" className="relative cursor-pointer l inline-block">
+                    <label htmlFor="my-drawer" className="relative cursor-pointer inline-block">
                         <FiMenu size={"32px"} onClick={changeWidth} className="text-white font-bold m-4"/>
                     </label>
 
@@ -58,7 +58,7 @@ function HomeLayout({ children }) {
                             </button>
                         </li>
                         <li>
-                            <Link to="/home">Home</Link>
+                            <Link to="/">Home</Link>
                         </li>
                         {isLoggedIn && role === "ADMIN" &&
                             (<li>

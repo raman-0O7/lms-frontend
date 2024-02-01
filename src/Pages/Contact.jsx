@@ -1,8 +1,9 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
-import HomeLayout from "../HomeLayout";
-import { isEmail } from "../Helpers/checkValidation";
+
 import axiosInstance from "../Helpers/axiosInstance";
+import { isEmail } from "../Helpers/checkValidation";
+import HomeLayout from "../HomeLayout";
 
 function Contact() {
   const [userInput, setUserInput] = useState({
