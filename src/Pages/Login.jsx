@@ -36,13 +36,14 @@ function Login() {
     const res = await dispatch(login(loginData));
     if(res?.payload?.success) {
       console.log(res.payload);
+      
       navigate("/");
-    }
 
-    setLoginData({
-      email: "",
-      password:"",
-    });
+      setLoginData({
+        email: "",
+        password:"",
+      });
+    }
   }
   return (
     <HomeLayout >
